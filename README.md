@@ -68,9 +68,9 @@ python manage.py migrate
 python manage.py runserver
 ```
 > **_NOTE:_** Include the argument `--insecure` if the static files are served by Django<br/>
-> ``
+> ```
 > python manage.py runserver --insecure
-> ``
+> ```
 
 ####  For Frontend
 
@@ -86,9 +86,9 @@ npm i
 npm run build
 ```
 > **_NOTE:_** Copy the staticfiles to be served by Django if it is required<br/>
-> ``
+> ```
 > python manage.py collectstatic
-> ``
+> ```
 
 <br/>
 
