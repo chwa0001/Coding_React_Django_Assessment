@@ -29,12 +29,15 @@ if settings.DEBUG:
     debugger_path +=[
         path('__debug__/', include(debug_toolbar.urls)),
     ]
+
+#Comment the execution will disable the Django to serve the static root and media root under the Django document root
 else:
     from django.views.static import serve
     frontend_path += [
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
     re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
     ]
+
 frontend_path += [
     re_path(r"^.*$", TemplateView.as_view(template_name="base.html")),
 ]

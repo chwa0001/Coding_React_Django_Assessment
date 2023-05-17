@@ -48,7 +48,6 @@ __pycache__/
 .Python
 env/
 build/
-dist/
 
 # Installer logs
 pip-log.txt

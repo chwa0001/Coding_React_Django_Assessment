@@ -38,7 +38,7 @@ export default function UserInfo(Appdata:CurrentData) {
     UserAdmin.getUsers().then((response) => {
       setUserInfos(response.data.data);
     });
-  }, []);
+  }, [open]);
 
   const handleChange = (event: SelectChangeEvent) => {
     const user = userInfos.find(user=>user.id===Number(event.target.value))
