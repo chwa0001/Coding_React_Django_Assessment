@@ -48,7 +48,7 @@ export default function ImageGallery(Appdata:CurrentData){
         }).catch((err) => {
           Appdata.triggerAlert("Error to retrieve images!","error")
         })
-    }, []);
+    }, [Appdata.userdata.id]);
 
     return (
     <ImageList>

@@ -110,7 +110,7 @@ class ShowImageView(APIView):
                 directory = imageData.directory
                 fileType = imageData.imagename.split('.')[-1]
 
-                if fileType in ['png','jpeg','svg']:
+                if fileType in ['png','jpeg','svg','jpg']:
                     if os.path.exists(directory):
                         with open(directory,'rb') as f:
                             data = f.read()
